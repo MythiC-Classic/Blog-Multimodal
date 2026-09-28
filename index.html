@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Semana del Libro | Alas entre páginas</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Mariposas -->
+    <div class="butterfly butterfly1">🦋</div>
+    <div class="butterfly butterfly2">🦋</div>
+    <div class="butterfly butterfly3">🦋</div>
+    <div class="butterfly butterfly4">🦋</div>
+
+    <!-- Partículas -->
+    <div class="particles"></div>
+
+    <!-- Encabezado -->
+    <header>
+
+        <div class="logo">
+            <span>✦</span>
+            SEMANA DEL LIBRO
+            <span>✦</span>
+        </div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#generos">Textos</a>
+            <a href="#situaciones">Situaciones</a>
+            <a href="#reflexion">Reflexión</a>
+        </nav>
+
+    </header>
+
+
+    <!-- HERO -->
+    <main>
+
+        <section id="inicio" class="hero">
+
+            <div class="hero-content">
+
+                <p class="small-title">SEMANA DEL LIBRO</p>
+
+                <h1>
+                    Alas entre
+                    <span>páginas</span>
+                </h1>
+
+                <p class="hero-text">
+                    Los libros guardan historias, pensamientos y mundos que
+                    esperan ser descubiertos. Cada página puede convertirse
+                    en un lugar diferente para imaginar, aprender y recordar.
+                </p>
+
+                <button id="exploreButton">
+                    Explorar la biblioteca
+                </button>
+
+            </div>
+
+            <div class="book-decoration">
+                <div class="book">
+                    <div class="page left-page"></div>
+                    <div class="page right-page"></div>
+                    <div class="book-symbol">✦</div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- INTRODUCCIÓN -->
+        <section class="introduction">
+
+            <p class="section-label">01 — ENTRE PALABRAS</p>
+
+            <h2>
+                Una semana para
+                <span>leer y crear</span>
+            </h2>
+
+            <p>
+                La Semana del Libro es una oportunidad para acercarnos a la
+                literatura y descubrir diferentes formas de expresar ideas.
+                Un libro puede entretenernos, enseñarnos algo nuevo o
+                simplemente acompañarnos durante un momento tranquilo.
+            </p>
+
+            <p>
+                Dentro de sus páginas podemos encontrar poemas, cuentos,
+                leyendas, artículos, ensayos y trabajos realizados para
+                comunicar conocimientos o experiencias.
+            </p>
+
+        </section>
+
+
+        <!-- GENEROS -->
+        <section id="generos" class="library">
+
+            <p class="section-label">02 — LA BIBLIOTECA</p>
+
+            <h2>
+                Formas de
+                <span>contar</span>
+            </h2>
+
+            <div class="filters">
+
+                <button class="filter active" data-filter="all">
+                    Todos
+                </button>
+
+                <button class="filter" data-filter="poema">
+                    Poemas
+                </button>
+
+                <button class="filter" data-filter="cuento">
+                    Cuentos
+                </button>
+
+                <button class="filter" data-filter="leyenda">
+                    Leyendas
+                </button>
+
+                <button class="filter" data-filter="articulo">
+                    Artículos
+                </button>
+
+                <button class="filter" data-filter="ensayo">
+                    Ensayos
+                </button>
+
+                <button class="filter" data-filter="trabajo">
+                    Trabajos
+                </button>
+
+            </div>
+
+
+            <div class="cards">
+
+                <!-- POEMA -->
+                <article class="card" data-category="poema">
+
+                    <div class="card-number">01</div>
+
+                    <div class="card-icon">❈</div>
+
+                    <h3>Poemas</h3>
+
+                    <p>
+                        Textos que utilizan las palabras de una manera
+                        artística para expresar sentimientos, pensamientos
+                        o imágenes.
+                    </p>
+
+                    <button class="open-card">
+                        Ver ejemplo
+                    </button>
+
+                    <div class="card-example">
+
+                        <strong>Ejemplo:</strong>
+
+                        <p>
+                            "Una mariposa cruza el silencio,
+                            dejando en sus alas
+                            el recuerdo de una página."
+                        </p>
+
+                        <small>
+                            Se puede encontrar en libros de poesía,
+                            recitales escolares o actividades literarias.
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <!-- CUENTO -->
+                <article class="card" data-category="cuento">
+
+                    <div class="card-number">02</div>
+
+                    <div class="card-icon">◇</div>
+
+                    <h3>Cuentos</h3>
+
+                    <p>
+                        Narraciones generalmente breves que presentan
+                        personajes, acontecimientos y un lugar donde
+                        ocurre la historia.
+                    </p>
+
+                    <button class="open-card">
+                        Ver ejemplo
+                    </button>
+
+                    <div class="card-example">
+
+                        <strong>Ejemplo:</strong>
+
+                        <p>
+                            Un estudiante encuentra un libro antiguo
+                            en la biblioteca. Cada vez que abre una
+                            página, aparece dentro de la historia.
+                        </p>
+
+                        <small>
+                            Puede utilizarse en actividades escolares,
+                            concursos de escritura o lecturas recreativas.
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <!-- LEYENDA -->
+                <article class="card" data-category="leyenda">
+
+                    <div class="card-number">03</div>
+
+                    <div class="card-icon">☽</div>
+
+                    <h3>Leyendas</h3>
+
+                    <p>
+                        Relatos tradicionales que mezclan acontecimientos,
+                        lugares o personajes con elementos fantásticos.
+                    </p>
+
+                    <button class="open-card">
+                        Ver ejemplo
+                    </button>
+
+                    <div class="card-example">
+
+                        <strong>Ejemplo:</strong>
+
+                        <p>
+                            Una historia tradicional sobre una criatura
+                            misteriosa que aparece cerca de un río durante
+                            las noches de luna llena.
+                        </p>
+
+                        <small>
+                            Pueden encontrarse en la tradición oral,
+                            libros culturales y recopilaciones históricas.
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ARTICULO -->
+                <article class="card" data-category="articulo">
+
+                    <div class="card-number">04</div>
+
+                    <div class="card-icon">▣</div>
+
+                    <h3>Artículos</h3>
+
+                    <p>
+                        Textos que presentan información sobre un tema
+                        específico con la intención de informar o explicar.
+                    </p>
+
+                    <button class="open-card">
+                        Ver ejemplo
+                    </button>
+
+                    <div class="card-example">
+
+                        <strong>Ejemplo:</strong>
+
+                        <p>
+                            Un artículo sobre cómo la tecnología está
+                            cambiando la manera en que las personas leen
+                            libros actualmente.
+                        </p>
+
+                        <small>
+                            Puede aparecer en revistas, periódicos,
+                            páginas educativas o blogs.
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <!-- ENSAYO -->
+                <article class="card" data-category="ensayo">
+
+                    <div class="card-number">05</div>
+
+                    <div class="card-icon">✧</div>
+
+                    <h3>Ensayos</h3>
+
+                    <p>
+                        Textos donde el autor desarrolla una idea,
+                        reflexión o argumento personal sobre determinado
+                        tema.
+                    </p>
+
+                    <button class="open-card">
+                        Ver ejemplo
+                    </button>
+
+                    <div class="card-example">
+
+                        <strong>Ejemplo:</strong>
+
+                        <p>
+                            Un ensayo que reflexiona sobre si los libros
+                            físicos continuarán siendo importantes en una
+                            época dominada por las pantallas.
+                        </p>
+
+                        <small>
+                            Es común encontrarlos en trabajos académicos
+                            y actividades escolares.
+                        </small>
+
+                    </div>
+
+                </article>
+
+
+                <!-- TRABAJO -->
+                <article class="card" data-category="trabajo">
+
+                    <div class="card-number">06</div>
+
+                    <div class="card-icon">▤</div>
+
+                    <h3>Trabajos</h3>
+
+                    <p>
+                        Investigaciones o proyectos realizados para
+                        presentar información y demostrar conocimientos.
+                    </p>
+
+                    <button class="open-card">
+                        Ver ejemplo
+                    </button>
+
+                    <div class="card-example">
+
+                        <strong>Ejemplo:</strong>
+
+                        <p>
+                            Una investigación escolar sobre la historia
+                            de la literatura panameña y sus principales
+                            autores.
+                        </p>
+
+                        <small>
+                            Puede presentarse como documento, exposición,
+                            revista digital o proyecto multimedia.
+                        </small>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- SITUACIONES -->
+        <section id="situaciones" class="situations">
+
+            <p class="section-label">03 — ¿DÓNDE APARECEN?</p>
+
+            <h2>
+                Los textos están
+                <span>en todas partes</span>
+            </h2>
+
+            <div class="situation-container">
+
+                <div class="situation">
+                    <span>01</span>
+
+                    <div>
+                        <h3>En la escuela</h3>
+
+                        <p>
+                            Un estudiante puede utilizar cuentos, poemas,
+                            artículos o ensayos para realizar una tarea,
+                            exposición o proyecto.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="situation">
+                    <span>02</span>
+
+                    <div>
+                        <h3>En una biblioteca</h3>
+
+                        <p>
+                            Podemos encontrar diferentes géneros literarios
+                            organizados en libros y colecciones.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="situation">
+                    <span>03</span>
+
+                    <div>
+                        <h3>En Internet</h3>
+
+                        <p>
+                            Blogs, revistas digitales y sitios educativos
+                            permiten acceder a artículos, investigaciones
+                            y otros tipos de textos.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="situation">
+                    <span>04</span>
+
+                    <div>
+                        <h3>En nuestra vida cotidiana</h3>
+
+                        <p>
+                            Incluso una noticia, una reseña o una historia
+                            compartida puede utilizar diferentes formas
+                            de comunicación escrita.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- REFLEXIÓN -->
+        <section id="reflexion" class="reflection">
+
+            <div class="reflection-line"></div>
+
+            <p class="section-label">04 — ÚLTIMA PÁGINA</p>
+
+            <h2>
+                Una página termina.
+                <br>
+                <span>La historia continúa.</span>
+            </h2>
+
+            <p>
+                Leer no solamente significa pasar páginas. También significa
+                imaginar, cuestionar, descubrir y crear. Cada persona puede
+                encontrar una historia diferente dentro del mismo libro.
+            </p>
+
+            <p>
+                Durante la Semana del Libro podemos recordar que las palabras
+                no permanecen quietas: viajan de una persona a otra, como
+                mariposas que abandonan una página para buscar otro lugar.
+            </p>
+
+            <button id="quoteButton">
+                Abrir una última frase
+            </button>
+
+            <div id="quote" class="quote"></div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-symbol">✦</div>
+
+        <p>
+            SEMANA DEL LIBRO
+        </p>
+
+        <small>
+            Cada página puede esconder un mundo.
+        </small>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
