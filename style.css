@@ -1,0 +1,2198 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Libre+Baskerville:wght@400;700&display=swap');
+
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root {
+
+    --black: #090710;
+    --dark-purple: #151021;
+    --purple: #281b3c;
+    --purple-light: #5e4779;
+    --blue: #394567;
+
+    --silver: #c9c4d2;
+    --white: #eeeaf2;
+
+    --text: #c4becd;
+    --muted: #81798e;
+
+    --border: rgba(190, 175, 210, 0.18);
+
+    /* Colores del proyecto */
+    --project-white: #f7f4ee;
+    --orange: #f28a2e;
+    --orange-light: #ffad5c;
+    --orange-dark: #b95d12;
+
+}
+
+
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    background:
+        radial-gradient(
+            circle at 70% 15%,
+            rgba(76, 59, 105, 0.25),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 20% 70%,
+            rgba(48, 56, 91, 0.2),
+            transparent 30%
+        ),
+
+        var(--black);
+
+    color: var(--text);
+
+    font-family: "Libre Baskerville", serif;
+
+    overflow-x: hidden;
+
+}
+
+
+/* Textura */
+
+body::before {
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,0.015) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.015) 1px,
+            transparent 1px
+        );
+
+    background-size: 45px 45px;
+
+    z-index: -1;
+
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 22px 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: rgba(9, 7, 16, 0.75);
+
+    backdrop-filter: blur(12px);
+
+    border-bottom: 1px solid var(--border);
+
+    z-index: 100;
+
+}
+
+
+.logo {
+
+    font-family: "Cinzel", serif;
+
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+    color: var(--white);
+
+}
+
+
+.logo span {
+
+    color: #8c77a6;
+
+    margin: 0 5px;
+
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 28px;
+
+}
+
+
+nav a {
+
+    color: var(--muted);
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+
+}
+
+
+nav a:hover {
+
+    color: var(--white);
+
+}
+
+
+/* =========================
+   MARIPOSAS
+========================= */
+
+.butterfly {
+
+    position: fixed;
+
+    z-index: 50;
+
+    pointer-events: none;
+
+    filter:
+        grayscale(0.3)
+        brightness(0.8)
+        drop-shadow(
+            0 0 12px rgba(130,110,170,0.6)
+        );
+
+    opacity: 0.6;
+
+}
+
+
+.butterfly1 {
+
+    font-size: 27px;
+
+    animation:
+        fly1 17s infinite linear;
+
+}
+
+
+.butterfly2 {
+
+    font-size: 20px;
+
+    animation:
+        fly2 23s infinite linear;
+
+    animation-delay: -7s;
+
+}
+
+
+.butterfly3 {
+
+    font-size: 16px;
+
+    animation:
+        fly3 20s infinite linear;
+
+    animation-delay: -12s;
+
+}
+
+
+.butterfly4 {
+
+    font-size: 23px;
+
+    animation:
+        fly4 26s infinite linear;
+
+    animation-delay: -4s;
+
+}
+
+
+@keyframes fly1 {
+
+    0% {
+        left: -10%;
+        top: 70%;
+        transform: rotate(15deg);
+    }
+
+    25% {
+        left: 25%;
+        top: 45%;
+        transform: rotate(-15deg);
+    }
+
+    50% {
+        left: 55%;
+        top: 65%;
+        transform: rotate(10deg);
+    }
+
+    75% {
+        left: 78%;
+        top: 30%;
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        left: 110%;
+        top: 55%;
+        transform: rotate(15deg);
+    }
+
+}
+
+
+@keyframes fly2 {
+
+    0% {
+        left: 110%;
+        top: 20%;
+    }
+
+    50% {
+        left: 50%;
+        top: 60%;
+    }
+
+    100% {
+        left: -10%;
+        top: 35%;
+    }
+
+}
+
+
+@keyframes fly3 {
+
+    0% {
+        left: 20%;
+        top: 110%;
+    }
+
+    50% {
+        left: 65%;
+        top: 45%;
+    }
+
+    100% {
+        left: 35%;
+        top: -10%;
+    }
+
+}
+
+
+@keyframes fly4 {
+
+    0% {
+        left: 90%;
+        top: 100%;
+    }
+
+    50% {
+        left: 45%;
+        top: 40%;
+    }
+
+    100% {
+        left: 5%;
+        top: -10%;
+    }
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 150px 10% 80px;
+
+}
+
+
+.hero-content {
+
+    max-width: 650px;
+
+}
+
+
+.small-title,
+.section-label {
+
+    color: #8c77a6;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 22px;
+
+}
+
+
+.hero h1 {
+
+    font-family: "Cinzel", serif;
+
+    font-size: clamp(55px, 8vw, 105px);
+
+    line-height: 0.95;
+
+    font-weight: 500;
+
+    color: var(--white);
+
+}
+
+
+.hero h1 span {
+
+    color: #76618d;
+
+    display: block;
+
+    font-style: italic;
+
+}
+
+
+.hero-text {
+
+    max-width: 600px;
+
+    margin-top: 35px;
+
+    line-height: 1.9;
+
+    font-size: 15px;
+
+    color: var(--text);
+
+}
+
+
+button {
+
+    border: 1px solid rgba(175,155,200,0.35);
+
+    background: rgba(52,39,68,0.4);
+
+    color: var(--white);
+
+    padding: 14px 23px;
+
+    margin-top: 30px;
+
+    cursor: pointer;
+
+    font-family: "Cinzel", serif;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+
+}
+
+
+button:hover {
+
+    background: #3a2b4b;
+
+    border-color: #8c77a6;
+
+    box-shadow:
+        0 0 25px rgba(111,87,140,0.25);
+
+}
+
+
+/* =========================
+   LIBRO
+========================= */
+
+.book-decoration {
+
+    width: 350px;
+
+    height: 350px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.book {
+
+    width: 260px;
+
+    height: 190px;
+
+    position: relative;
+
+    transform:
+        perspective(600px)
+        rotateX(8deg)
+        rotateY(-8deg);
+
+    filter:
+        drop-shadow(
+            0 25px 25px rgba(0,0,0,0.6)
+        );
+
+}
+
+
+.page {
+
+    position: absolute;
+
+    width: 50%;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #b7adbd,
+            #62586b
+        );
+
+    border: 1px solid #81768c;
+
+}
+
+
+.left-page {
+
+    left: 0;
+
+    transform-origin: right;
+
+    border-radius:
+        10px
+        0
+        0
+        5px;
+
+}
+
+
+.right-page {
+
+    right: 0;
+
+    transform-origin: left;
+
+    border-radius:
+        0
+        10px
+        5px
+        0;
+
+}
+
+
+.book-symbol {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    color: #2b2135;
+
+    font-size: 32px;
+
+    z-index: 5;
+
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+section {
+
+    padding: 120px 10%;
+
+}
+
+
+.introduction {
+
+    max-width: 900px;
+
+}
+
+
+section h2 {
+
+    font-family: "Cinzel", serif;
+
+    color: var(--white);
+
+    font-size:
+        clamp(
+            38px,
+            5vw,
+            65px
+        );
+
+    font-weight: 500;
+
+    line-height: 1.1;
+
+    margin-bottom: 40px;
+
+}
+
+
+section h2 span {
+
+    color: #76618d;
+
+    font-style: italic;
+
+}
+
+
+.introduction p:not(.section-label) {
+
+    max-width: 800px;
+
+    font-size: 15px;
+
+    line-height: 2;
+
+    margin-bottom: 20px;
+
+    color: var(--text);
+
+}
+
+
+/* =========================
+   ILUSTRACIONES INTRO
+========================= */
+
+.illustration-row {
+
+    display: flex;
+
+    gap: 25px;
+
+    margin-top: 55px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.mini-illustration {
+
+    width: 145px;
+
+    min-height: 125px;
+
+    padding: 18px;
+
+    border: 1px solid var(--border);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(47,36,58,0.65),
+            rgba(17,13,25,0.7)
+        );
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    transition:
+        transform 0.4s,
+        border-color 0.4s;
+
+}
+
+
+.mini-illustration:hover {
+
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(145,120,170,0.5);
+
+}
+
+
+.illus-art {
+
+    font-size: 38px;
+
+    margin-bottom: 12px;
+
+    filter:
+        drop-shadow(
+            0 0 10px
+            rgba(170,140,200,0.35)
+        );
+
+}
+
+
+.mini-illustration span {
+
+    font-family: "Cinzel", serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: var(--muted);
+
+}
+
+
+/* =========================
+   ILUSTRACIÓN DE BIBLIOTECA
+========================= */
+
+.section-illustration {
+
+    min-height: 180px;
+
+    position: relative;
+
+    margin:
+        10px
+        0
+        45px;
+
+    border-top:
+        1px solid var(--border);
+
+    border-bottom:
+        1px solid var(--border);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+}
+
+
+.illustration-bookmark {
+
+    position: relative;
+
+    z-index: 3;
+
+    width: 75px;
+
+    height: 95px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #76618d,
+            #3b2b4c
+        );
+
+    color: var(--white);
+
+    font-size: 28px;
+
+    clip-path:
+        polygon(
+            0 0,
+            100% 0,
+            100% 100%,
+            50% 82%,
+            0 100%
+        );
+
+    box-shadow:
+        0 15px 30px
+        rgba(0,0,0,0.4);
+
+}
+
+
+.illustration-orbit {
+
+    position: absolute;
+
+    border:
+        1px solid
+        rgba(150,130,170,0.22);
+
+    border-radius: 50%;
+
+}
+
+
+.orbit-one {
+
+    width: 320px;
+
+    height: 120px;
+
+    transform:
+        rotate(-10deg);
+
+}
+
+
+.orbit-two {
+
+    width: 450px;
+
+    height: 160px;
+
+    transform:
+        rotate(12deg);
+
+}
+
+
+.section-illustration-text {
+
+    position: absolute;
+
+    left: 30px;
+
+    bottom: 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+}
+
+
+.section-illustration-text strong {
+
+    font-family: "Cinzel", serif;
+
+    color: var(--white);
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.section-illustration-text span {
+
+    font-size: 11px;
+
+    color: var(--muted);
+
+}
+
+
+/* =========================
+   FILTROS
+========================= */
+
+.filters {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 50px;
+
+}
+
+
+.filter {
+
+    margin: 0;
+
+    padding: 10px 15px;
+
+    font-size: 10px;
+
+    color: var(--muted);
+
+}
+
+
+.filter.active {
+
+    color: var(--white);
+
+    border-color: #76618d;
+
+    background:
+        rgba(70,50,90,0.4);
+
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+
+}
+
+
+.card {
+
+    position: relative;
+
+    min-height: 330px;
+
+    padding: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(46,35,57,0.65),
+            rgba(17,13,25,0.8)
+        );
+
+    border:
+        1px solid
+        var(--border);
+
+    transition:
+        transform 0.4s,
+        border 0.4s;
+
+}
+
+
+.card:hover {
+
+    transform:
+        translateY(-7px);
+
+    border-color:
+        rgba(145,120,170,0.5);
+
+}
+
+
+.card-number {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 25px;
+
+    color: #4e4359;
+
+    font-family: "Cinzel", serif;
+
+}
+
+
+.card-icon {
+
+    color: #89769d;
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.card h3 {
+
+    color: var(--white);
+
+    font-family: "Cinzel", serif;
+
+    font-size: 22px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.card > p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+.open-card {
+
+    margin-top: 20px;
+
+    padding: 9px 15px;
+
+    font-size: 10px;
+
+}
+
+
+.card-example {
+
+    display: none;
+
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid
+        var(--border);
+
+    animation:
+        appear 0.4s ease;
+
+}
+
+
+.card-example.show {
+
+    display: block;
+
+}
+
+
+.card-example strong {
+
+    color: #a18caf;
+
+    font-family: "Cinzel", serif;
+
+}
+
+
+.card-example p {
+
+    margin: 12px 0;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    color: var(--white);
+
+}
+
+
+.card-example small {
+
+    color: var(--muted);
+
+    line-height: 1.6;
+
+}
+
+
+@keyframes appear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(10px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+/* =========================
+   SITUACIONES
+========================= */
+
+.situation-container {
+
+    max-width: 900px;
+
+    border-top:
+        1px solid
+        var(--border);
+
+}
+
+
+.situation {
+
+    display: grid;
+
+    grid-template-columns:
+        70px
+        55px
+        1fr;
+
+    gap: 20px;
+
+    align-items: center;
+
+    padding: 30px 0;
+
+    border-bottom:
+        1px solid
+        var(--border);
+
+    transition: 0.3s;
+
+}
+
+
+.situation:hover {
+
+    padding-left: 15px;
+
+}
+
+
+.situation-number {
+
+    color: #665579;
+
+    font-family: "Cinzel", serif;
+
+}
+
+
+.situation-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(145,120,170,0.25);
+
+    background:
+        rgba(45,34,57,0.45);
+
+    font-size: 21px;
+
+}
+
+
+.situation h3 {
+
+    color: var(--white);
+
+    font-family: "Cinzel", serif;
+
+    margin-bottom: 10px;
+
+}
+
+
+.situation p {
+
+    color: var(--muted);
+
+    line-height: 1.8;
+
+    font-size: 13px;
+
+}
+
+
+/* =========================
+   REFLEXIÓN
+========================= */
+
+.reflection {
+
+    min-height: 90vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    position: relative;
+
+}
+
+
+.reflection-line {
+
+    width: 80px;
+
+    height: 1px;
+
+    background: #76618d;
+
+    margin-bottom: 30px;
+
+}
+
+
+.reflection > p:not(.section-label) {
+
+    max-width: 750px;
+
+    line-height: 2;
+
+    margin-bottom: 20px;
+
+    font-size: 14px;
+
+}
+
+
+.quote {
+
+    margin-top: 30px;
+
+    min-height: 30px;
+
+    color: #a998b7;
+
+    font-family: "Cinzel", serif;
+
+    font-style: italic;
+
+    transition: 0.5s;
+
+}
+
+
+/* ==================================================
+   PROYECTO DEL GRUPO
+================================================== */
+
+.project-section {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(242,138,46,0.10),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(255,255,255,0.07),
+            transparent 28%
+        ),
+
+        linear-gradient(
+            145deg,
+            #111015,
+            #19171b
+        );
+
+    border-top:
+        2px solid
+        rgba(242,138,46,0.45);
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,0.12);
+
+}
+
+
+.project-heading {
+
+    max-width: 850px;
+
+}
+
+
+.project-label {
+
+    color: var(--orange);
+
+}
+
+
+.project-section h2 span {
+
+    color: var(--orange);
+
+}
+
+
+.project-intro {
+
+    max-width: 800px;
+
+    color: #d8d3cc;
+
+    line-height: 2;
+
+    font-size: 15px;
+
+}
+
+
+/* =========================
+   VISUAL JUSTICIA
+========================= */
+
+.justice-visual {
+
+    margin:
+        60px
+        0;
+
+    padding:
+        45px 30px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+    background:
+        rgba(255,255,255,0.035);
+
+    text-align: center;
+
+    position: relative;
+
+}
+
+
+.justice-symbol {
+
+    font-size: 75px;
+
+    color: var(--orange);
+
+    text-shadow:
+        0 0 30px
+        rgba(242,138,46,0.25);
+
+    margin-bottom: 30px;
+
+}
+
+
+.justice-colors {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.justice-color {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding:
+        10px 18px;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+    font-family: "Cinzel", serif;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.justice-color span {
+
+    width: 14px;
+
+    height: 14px;
+
+    border-radius: 50%;
+
+}
+
+
+.color-white {
+
+    color: #eeeae2;
+
+}
+
+
+.color-white span {
+
+    background:
+        #f7f4ee;
+
+    border:
+        1px solid
+        #c8c3bb;
+
+}
+
+
+.color-orange {
+
+    color: var(--orange-light);
+
+}
+
+
+.color-orange span {
+
+    background:
+        var(--orange);
+
+}
+
+
+.justice-visual > p {
+
+    margin-top: 25px;
+
+    color: #8f8981;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* =========================
+   TARJETAS DEL PROYECTO
+========================= */
+
+.project-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+
+}
+
+
+.project-card {
+
+    padding: 38px;
+
+    background:
+        rgba(255,255,255,0.035);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.12);
+
+    position: relative;
+
+}
+
+
+.project-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 4px;
+
+    height: 100%;
+
+    background:
+        var(--orange);
+
+}
+
+
+.project-card-label {
+
+    color:
+        var(--orange);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.project-card h3 {
+
+    color:
+        var(--project-white);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size: 27px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.project-card > p:not(.project-card-label) {
+
+    color:
+        #b9b3ab;
+
+    line-height: 1.9;
+
+    font-size: 13px;
+
+    margin-bottom: 18px;
+
+}
+
+
+.project-card strong {
+
+    color:
+        var(--project-white);
+
+}
+
+
+.parabola-highlight {
+
+    margin:
+        25px 0;
+
+    padding:
+        20px;
+
+    border-left:
+        2px solid
+        var(--orange);
+
+    background:
+        rgba(242,138,46,0.07);
+
+}
+
+
+.parabola-highlight span {
+
+    display: block;
+
+    color:
+        var(--orange);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    letter-spacing: 3px;
+
+    font-size: 11px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.parabola-highlight p {
+
+    color:
+        #d6d0c8;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================
+   FOTO DEL STAND
+========================= */
+
+.stand-photo-frame {
+
+    width: 100%;
+
+    min-height: 330px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(255,255,255,0.13);
+
+    background:
+        #f4f1eb;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.stand-photo-frame img {
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 330px;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+.stand-placeholder-content {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    color: #29251f;
+
+}
+
+
+.stand-placeholder-content span {
+
+    font-size: 45px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.stand-placeholder-content strong {
+
+    color: #29251f;
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.stand-placeholder-content small {
+
+    color: #625b52;
+
+    line-height: 1.7;
+
+}
+
+
+.stand-photo-frame:not(.stand-placeholder)
+.stand-placeholder-content {
+
+    display: none;
+
+}
+
+
+/* =========================
+   JUEGO DIDÁCTICO
+========================= */
+
+.game-invitation {
+
+    margin-top: 35px;
+
+    padding:
+        45px;
+
+    display: grid;
+
+    grid-template-columns:
+        120px
+        1fr;
+
+    gap: 35px;
+
+    align-items: center;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(242,138,46,0.13),
+            rgba(255,255,255,0.035)
+        );
+
+    border:
+        1px solid
+        rgba(242,138,46,0.35);
+
+}
+
+
+.game-decoration {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    color: var(--orange);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+}
+
+
+.game-decoration span:nth-child(1) {
+
+    width: 70px;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border:
+        1px solid
+        rgba(242,138,46,0.5);
+
+    font-size: 35px;
+
+}
+
+
+.game-decoration span:nth-child(2) {
+
+    font-size: 15px;
+
+    letter-spacing: 4px;
+
+}
+
+
+.game-decoration span:nth-child(3) {
+
+    font-size: 18px;
+
+}
+
+
+.game-copy h3 {
+
+    color:
+        var(--project-white);
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.game-copy > p:not(.project-card-label) {
+
+    color:
+        #bcb5ad;
+
+    font-size: 13px;
+
+    line-height: 1.9;
+
+    margin-bottom: 15px;
+
+}
+
+
+.game-copy strong {
+
+    color:
+        var(--orange-light);
+
+}
+
+
+.game-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 15px;
+
+    padding:
+        14px 23px;
+
+    color:
+        var(--project-white);
+
+    background:
+        var(--orange-dark);
+
+    border:
+        1px solid
+        var(--orange);
+
+    text-decoration: none;
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    transition:
+        0.3s;
+
+}
+
+
+.game-button:hover {
+
+    background:
+        var(--orange);
+
+    color:
+        #17120e;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 30px
+        rgba(242,138,46,0.2);
+
+}
+
+
+.game-button span {
+
+    font-size: 18px;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    padding: 70px 10%;
+
+    border-top:
+        1px solid
+        var(--border);
+
+    text-align: center;
+
+}
+
+
+.footer-symbol {
+
+    color: #77628c;
+
+    font-size: 25px;
+
+    margin-bottom: 15px;
+
+}
+
+
+footer p {
+
+    font-family:
+        "Cinzel",
+        serif;
+
+    color:
+        var(--white);
+
+    letter-spacing: 4px;
+
+    font-size: 13px;
+
+}
+
+
+footer small {
+
+    display: block;
+
+    margin-top: 12px;
+
+    color:
+        var(--muted);
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    nav {
+
+        display: none;
+
+    }
+
+
+    .hero {
+
+        padding-left: 7%;
+
+        padding-right: 7%;
+
+    }
+
+
+    .book-decoration {
+
+        display: none;
+
+    }
+
+
+    section {
+
+        padding-left: 7%;
+
+        padding-right: 7%;
+
+    }
+
+
+    .cards {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .project-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .game-invitation {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+    }
+
+
+    .game-decoration {
+
+        flex-direction: row;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+
+        font-size: 55px;
+
+    }
+
+
+    .cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .situation {
+
+        grid-template-columns:
+            40px
+            45px
+            1fr;
+
+        gap: 12px;
+
+    }
+
+
+    header {
+
+        padding: 20px;
+
+    }
+
+
+    .logo {
+
+        font-size: 11px;
+
+    }
+
+
+    .illustration-row {
+
+        gap: 12px;
+
+    }
+
+
+    .mini-illustration {
+
+        width: 100%;
+
+    }
+
+
+    .section-illustration-text {
+
+        left: 15px;
+
+    }
+
+
+    .orbit-one {
+
+        width: 250px;
+
+    }
+
+
+    .orbit-two {
+
+        width: 320px;
+
+    }
+
+
+    .project-card {
+
+        padding: 28px 23px;
+
+    }
+
+
+    .justice-symbol {
+
+        font-size: 60px;
+
+    }
+
+
+    .game-invitation {
+
+        padding: 30px 22px;
+
+    }
+
+
+    .game-copy h3 {
+
+        font-size: 24px;
+
+    }
+
+
+    .stand-photo-frame,
+    .stand-photo-frame img {
+
+        min-height: 250px;
+
+    }
+
+}
